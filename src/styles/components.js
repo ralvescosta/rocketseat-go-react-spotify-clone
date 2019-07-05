@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Container = styled.div`
-  flex: 1; /*Ocupa toda a largura da tela*/
+  flex: 1; /*Ocupa toda a largura da telaa*/
   display: flex;
 `;
 export const Content = styled.div`
