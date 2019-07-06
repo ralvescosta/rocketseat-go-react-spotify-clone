@@ -1,3 +1,4 @@
 import Browse from "./Browse";
+import Playlist from "./Playlist";
 
-export { Browse };
+export { Browse, Playlist };
