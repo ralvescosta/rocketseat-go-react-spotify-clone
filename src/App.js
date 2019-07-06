@@ -11,7 +11,7 @@ import GlobalStyle from "./styles/global";
 import { Wrapper, Container, Content } from "./styles/components";
 
 //Componentes
-import { Sidebar, Player, Header } from "./components";
+import { Sidebar, Player, Header, ErrorBox } from "./components";
 
 // Redux
 import store from "./store";
@@ -27,6 +27,7 @@ function App() {
           <Container>
             <Sidebar />
             <Content>
+              <ErrorBox />
               <Header />
               <Routes />
             </Content>
