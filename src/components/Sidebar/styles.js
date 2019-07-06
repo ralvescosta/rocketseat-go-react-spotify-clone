@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { Spinner } from "../Loading/styles";
+
 export const Container = styled.aside`
   height: 100%;
   width: 200px;
@@ -25,12 +27,20 @@ export const Nav = styled.ul`
     margin: 0;
   }
   li {
+    display: flex;
+    align-items: center;
+
     span {
       font-size: 13px;
       text-transform: uppercase;
       line-height: 22px;
       letter-spacing: 1.11px;
       font-weight: 300;
+    }
+    ${Spinner} {
+      /*Precisa ficar abaixo do elemento que sera feito a estilização*/
+      height: 15px;
+      margin-left: 5px;
     }
     a {
       color: inherit; /*Mesma color do container*/
