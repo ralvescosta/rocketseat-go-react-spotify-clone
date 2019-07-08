@@ -39,7 +39,8 @@ const Player = ({
   positionShown,
   progress,
   handlePosition,
-  setPosition
+  setPosition,
+  setVolume
 }) => (
   <Container>
     {!!player.currentSong && (
@@ -49,6 +50,7 @@ const Player = ({
         onFinishedPlaying={next}
         onPlaying={playing}
         position={player.position}
+        volume={player.volume}
       />
     )}
 
@@ -121,7 +123,9 @@ const Player = ({
           borderRadius: 10
         }}
         trackStyle={{ background: "#FFF" }}
-        handleStyle={{ display: "none" }}
+        handleStyle={{ border: 0, cursor: "pointer" }}
+        value={player.volume}
+        onChange={setVolume}
       />
     </Volume>
   </Container>
@@ -147,7 +151,8 @@ Player.propTypes = {
   positionShown: PropTypes.string.isRequired,
   progress: PropTypes.number.isRequired,
   handlePosition: PropTypes.func.isRequired,
-  setPosition: PropTypes.func.isRequired
+  setPosition: PropTypes.func.isRequired,
+  setVolume: PropTypes.func.isRequired
 };
 
 function ms2time(duration) {
